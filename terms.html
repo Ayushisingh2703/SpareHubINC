@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spare Hub INC. - Smart Inventory Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class=" overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 bg-black backdrop-blur-md shadow-lg animate-slide-in-up">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center animate-fade-in-scale">
+                    <a href="./index.html" class="text-2xl font-bold text-brand">
+                        <img src="./images/Spare Hub.webp" alt="Spare Hub" class="h-8 rounded-lg">
+                </a>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="./index.html" class="text-gray-100 hover:text-brand hover-float transition-all duration-300 font-semibold">Home</a>
+                    <a href="./about.html" class="text-gray-100 hover:text-brand hover-float transition-all duration-300 font-semibold">About Us</a>
+                    <a href="./contact.html" class="text-gray-100 hover:text-brand hover-float transition-all duration-300 font-semibold">Contact Us</a>
+                    <button class="bg-brand text-white px-6 py-2 rounded-full hover:bg-brand hover-scale font-semibold animate-glow">
+                        Get Started
+                    </button>
+                </div>
+                
+                <div class="md:hidden">
+                    <button class="text-gray-100 hover:text-brand animate-pulse-custom">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg md:h-[500px] h-[600px] flex items-center pt-20 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class=" items-center">
+                <div class="text-white animate-slide-in-left text-center">
+                    <h1 class="text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 animate-fade-in-scale hero-title">
+                        Terms &
+                        <span class="text-brand">Condition</span>
+                    </h1>
+                    <p class="text-lg max-w-4xl  mb-8 opacity-90 animate-slide-in-up delay-200">
+                       At Spare Hub INC, you agree to follow guidelines, protect data, and accept policy updates.
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- main section -->
+
+  <main class="max-w-6xl mx-auto bg-white pt-[8rem] px-6">
+
+    <section>
+        <p class="mb-6"> <b>Effective Date:</b> May 23, 2025</p>
+      <p class="text-lg text-gray-700">
+       Thank you for choosing <strong class="text-green-800">Spare Hub INC.</strong> These Terms & Conditions govern your use of our website and inventory management services. By using our platform, you agree to follow these terms. If you do not agree, you must not use our services.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-green-900 mb-2 mt-5">1.Who Can Use Our Services</h2>
+      <h5 class="ml-6 my-2 text-gray-700">To use our platform, you must:</h5>
+      <ul class="list-disc list-inside ml-7 text-gray-700">
+        <li>Be at least 18 years of age, or legally authorized to represent your organization.</li>
+        <li>Agree to these terms on behalf of yourself or your company.</li>
+        <li>Use the services for lawful business purposes only.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-green-900 mb-2 mt-5">2. Creating an Account</h2>
+       <h5 class="ml-6 my-2 text-gray-700">You may need to create an account to access certain features. You are responsible for:</h5>
+      <ul class="list-disc list-inside ml-7 text-gray-700">
+        <li>Providing accurate registration details.</li>
+        <li>Keeping your login credentials safe and private.</li>
+        <li>All activity that happens under your account.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-green-900 mb-2 mt-5">3. Plans and Payments</h2>
+      <h5  class="ml-6 my-2 text-gray-700">We offer subscription plans that may vary in price and features. By subscribing, you agree that</h5>
+      <ul class="list-disc list-inside ml-7 text-gray-700">
+        <li>Charges are billed monthly or annually, depending on your selection.</li>
+        <li>All payments are final and non-refundable unless stated otherwise.</li>
+        <li>We reserve the right to update our prices, with advance notice.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-green-900 mb-2 mt-5">4. What You Can and Cannot Do</h2>
+      <p class="ml-6 my-2 text-gray-700">
+       While using Spare Hub INC., you  <b>may not:</b>
+      </p>
+      <ul class="list-disc list-inside ml-7 text-gray-700">
+        <li> Copy, resell, or reverse-engineer our software.</li>
+        <li>Share your account with unauthorized users.</li>
+        <li>Upload harmful, illegal, or misleading content.</li>
+          <li>Try to hack, overload, or interfere with our systems.</li>
+      </ul>
+       <p class="ml-6 my-2 text-gray-700">
+       You  <b>may</b> use our software to manage your inventory, access analytics, and improve operations in line with your subscription.</b>
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-green-900 mb-2 mt-5">5. Our Rights</h2>
+      <p class="mt-2 text-gray-700 ml-4">All platform content — including code, designs, and branding — is owned by Spare Hub INC. or licensed to us. We give you limited access to use it for your business under our terms.</p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-green-900 mb-2 mt-5">6. Suspension or Termination</h2>
+      <p class="ml-6 my-2 text-gray-700">We may suspend or delete your account if:</p>
+      <ul class="list-disc list-inside ml-7 text-gray-700">
+        <li>You violate any part of these terms.</li>
+        <li>Your payments are delayed or not processed.</li>
+        <li>There is misuse or security risk linked to your account.</li>
+      </ul>
+      <p class="mt-2 ml-6 text-gray-700">If your account is terminated, you may lose access to all stored data.</p>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-green-900 mb-2 mt-5">7. No Guarantees</h2>
+      <p class="mt-2 text-gray-700 ml-4"> We provide our services "as is" and without warranties of any kind. We don’t guarantee that:</p>
+      <ul class="list-disc list-inside ml-7 text-gray-700">
+        <li>The platform will always be available or error-free.</li>
+        <li>Data will be uninterrupted or secure.</li>
+        <li>The features will meet every specific business need.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-green-900 mb-2 mt-5">8. Limitation of Liability</h2>
+      <p class="mt-2 text-gray-700 ml-4">Spare Hub INC. is not responsible for:</p>
+      <ul class="list-disc list-inside ml-7 text-gray-700">
+        <li>Loss of revenue, profits, or business.</li>
+        <li>Data loss caused by user actions or third-party tools.</li>
+        <li>Delays or interruptions caused by factors beyond our control.</li>
+      </ul>
+       <p class="mt-2 text-gray-700 ml-4">Our total liability is limited to the amount you paid us in the past 3 months.</p>
+      </section>
+
+    <section>
+      <h2 class="text-2xl font-bold text-green-900 mb-2 mt-5">9. Changes to These Terms</h2>
+      <p class="mt-2 text-gray-700 ml-4">
+        We may update these terms occasionally. If that happens, we’ll post the changes on our website and update the effective date. Your continued use of the service means you accept the revised terms.
+      </p>
+    </section>
+
+     <section>
+      <h2 class="text-2xl font-bold text-green-900 mb-2 mt-5">10. Governing Law</h2>
+      <p class="mt-2 text-gray-700 ml-4">
+   These terms are governed by the laws of India, and any disputes must be resolved in the courts of Lucknow, Uttar Pradesh.
+      </p>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-2xl font-bold text-green-900 mb-2 mt-5">11. Have questions? You can reach us at:</h2>
+      <p class="mt-2 text-gray-700 ml-4">📧 Email: <a href="mailto:info@sparehub.com" class="text-blue-600 underline">info@sparehub.com</a></p>
+      <p class="mt-2 text-gray-700 ml-4">📞 Phone: <a href="tel:+919838006677" class="text-blue-600 underline">+91 9838 006 677</a></p>
+      <p class="mt-2 text-gray-700 ml-4"> 🏢 Address: 123 Krishna Nagar, Lucknow 226012</p>
+    </section>
+
+  </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="animate-fade-in-scale">
+                    <div class="text-2xl font-bold mb-4">
+                        <img src="./images/Spare Hub.webp" alt="Spare Hub" class="h-8">
+                    </div>
+                    <p class="text-gray-400">Spare Hub INC. inventory management for modern businesses.</p>
+                </div>
+                
+                <div class="animate-slide-in-up">
+                    <h3 class="text-lg font-bold mb-4 text-[#108e10]">Product</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-brand hover-float font-semibold">Features</a></li>
+                        <li><a href="#" class="hover:text-brand hover-float font-semibold">Pricing</a></li>
+                        <li><a href="#" class="hover:text-brand hover-float font-semibold">API</a></li>
+                        <li><a href="#" class="hover:text-brand hover-float font-semibold">Documentation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="animate-slide-in-up delay-100">
+                    <h3 class="text-lg font-bold mb-4 text-[#108e10]">Links</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="./index.html" class="hover:text-brand hover-float font-semibold">Home</a></li>
+                        <li><a href="./about.html" class="hover:text-brand hover-float font-semibold">About Us</a></li>
+                        <li><a href="./contact.html" class="hover:text-brand hover-float font-semibold">Contact Us</a></li>
+                        <li><a href="./privacy.html" class="hover:text-brand hover-float font-semibold">Privacy & Policy</a></li>
+                        <li><a href="./terms.html" class="hover:text-brand hover-float font-semibold">Terms & Condition</a></li>
+                    </ul>
+                </div>
+                
+                <div class="animate-slide-in-up delay-200">
+                    <h3 class="text-lg font-bold mb-4 text-[#108e10]">Connect</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-brand hover-scale animate-pulse-custom group">
+                            <i class="fab fa-facebook text-blue-600 group-hover:text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-brand hover-scale animate-pulse-custom delay-100 group">
+                            <i class="fab fa-instagram text-[#833AB4] group-hover:text-white"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-brand hover-scale animate-pulse-custom delay-200 group">
+                            <i class="fa-brands fa-youtube text-red-500 group-hover:text-white"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 animate-fade-in-scale">
+                <p>&copy; 2024 Marv Softwares India Private Limited. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Counter animation for stats
+        function animateCounter(element, target, duration = 2000) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            let current = start;
+            
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                
+                if (element.id === 'stat4') {
+                    element.textContent = Math.floor(current) + '%';
+                } else {
+                    element.textContent = Math.floor(current).toLocaleString();
+                }
+            }, 16);
+        }
+
+        // Initialize counters when they come into view
+        const observerOptions = {
+            threshold: 0.5,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const element = entry.target;
+                    let target;
+                    
+                    switch(element.id) {
+                        case 'stat1': target = 10000; break;
+                        case 'stat2': target = 5000000; break;
+                        case 'stat3': target = 150; break;
+                        case 'stat4': target = 99; break;
+                    }
+                    
+                    animateCounter(element, target);
+                    observer.unobserve(element);
+                }
+            });
+        }, observerOptions);
+
+        // Observe stat elements
+        ['stat1', 'stat2', 'stat3', 'stat4'].forEach(id => {
+            const element = document.getElementById(id);
+            if (element) observer.observe(element);
+        });
+
+        // Floating particles animation
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.className = 'fixed w-2 h-2 rounded-full opacity-30 pointer-events-none z-10';
+            particle.style.background = `hsl(${Math.random() * 360}, 70%, 60%)`;
+            particle.style.left = Math.random() * window.innerWidth + 'px';
+            particle.style.top = window.innerHeight + 'px';
+            particle.style.animation = `floatUp ${8 + Math.random() * 4}s linear infinite`;
+            document.body.appendChild(particle);
+            
+            setTimeout(() => {
+                if (particle.parentNode) {
+                    particle.remove();
+                }
+            }, 12000);
+        }
+
+        // Create particles periodically
+        setInterval(createParticle, 2000);
+
+        // Add floating particles CSS
+        const particleStyle = document.createElement('style');
+        particleStyle.textContent = `
+            @keyframes floatUp {
+                0% {
+                    transform: translateY(0) translateX(0) rotate(0deg);
+                    opacity: 0;
+                }
+                10% {
+                    opacity: 0.3;
+                }
+                90% {
+                    opacity: 0.3;
+                }
+                100% {
+                    transform: translateY(-100vh) translateX(${Math.random() > 0.5 ? '' : '-'}200px) rotate(360deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(particleStyle);
+
+        // Interactive background effect
+        document.addEventListener('mousemove', (e) => {
+            const cursor = document.createElement('div');
+            cursor.className = 'fixed w-4 h-4 bg-blue-400 rounded-full opacity-20 pointer-events-none';
+            cursor.style.left = e.clientX - 8 + 'px';
+            cursor.style.top = e.clientY - 8 + 'px';
+            cursor.style.animation = 'fadeOut 1s ease-out forwards';
+            document.body.appendChild(cursor);
+            
+            setTimeout(() => {
+                cursor.remove();
+            }, 1000);
+        });
+
+        // Add fade out animation for cursor trail
+        const cursorStyle = document.createElement('style');
+        cursorStyle.textContent = `
+            @keyframes fadeOut {
+                0% {
+                    transform: scale(1);
+                    opacity: 0.2;
+                }
+                100% {
+                    transform: scale(3);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(cursorStyle);
+
+        // Parallax effect for hero section (fixed)
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('.gradient-bg');
+            
+            if (parallax && scrolled < window.innerHeight) {
+                const speed = scrolled * 0.3;
+                parallax.style.transform = `translateY(${speed}px)`;
+            }
+        });
+
+        // Loading animation
+        window.addEventListener('load', () => {
+            // Add stagger animation to elements
+            const elements = document.querySelectorAll('.animate-slide-in-up, .animate-slide-in-left, .animate-slide-in-right');
+            elements.forEach((el, index) => {
+                el.style.animationDelay = `${index * 0.1}s`;
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.md\\:hidden button');
+        const mobileMenu = document.createElement('div');
+        mobileMenu.className = 'md:hidden bg-black shadow-lg absolute top-full left-0 right-0 hidden';
+        mobileMenu.innerHTML = `
+            <div class="px-4 py-4 space-y-2 text-center">
+                <a href="./index.html" class="block py-2 text-gray-200 hover:text-blue-600">Home</a>
+                <a href="./about.html" class="block py-2 text-gray-200 hover:text-blue-600">About Us</a>
+                <a href="./contact.html" class="block py-2 text-gray-200 hover:text-blue-600">Contact Us</a>
+                <button class="w-full bg-green-800 text-white px-6 py-2 rounded-full hover:bg-green-900 mt-2">
+                    Get Started
+                </button>
+            </div>
+        `;
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.parentNode.appendChild(mobileMenu);
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Form submission with animation
+        const contactForm = document.querySelector('#contact form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const submitBtn = contactForm.querySelector('button[type="submit"]');
+                const originalText = submitBtn.textContent;
+                
+                // Animate button
+                submitBtn.textContent = 'Sending...';
+                submitBtn.classList.add('animate-pulse-custom');
+                submitBtn.disabled = true;
+                
+                // Simulate form submission
+                setTimeout(() => {
+                    submitBtn.textContent = 'Message Sent! ✓';
+                    submitBtn.classList.remove('animate-pulse-custom');
+                    submitBtn.classList.add('bg-green-600');
+                    
+                    setTimeout(() => {
+                        submitBtn.textContent = originalText;
+                        submitBtn.classList.remove('bg-green-600');
+                        submitBtn.disabled = false;
+                        contactForm.reset();
+                    }, 2000);
+                }, 1500);
+            });
+        }
+
+        // Intersection Observer for scroll animations
+        const scrollObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-scale');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        // Observe all sections for scroll animations
+        document.querySelectorAll('section').forEach(section => {
+            scrollObserver.observe(section);
+        });
+
+        // Add typing effect to hero subtitle
+        function typeWriter(element, text, speed = 100) {
+            let i = 0;
+            element.innerHTML = '';
+            
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            type();
+        }
+
+        // Initialize typing effect after page load
+        setTimeout(() => {
+            const subtitle = document.querySelector('#home p');
+            if (subtitle) {
+                const originalText = subtitle.textContent;
+                typeWriter(subtitle, originalText, 50);
+            }
+        }, 4000);
+
+        // Add hover sound effect (visual feedback)
+        document.querySelectorAll('button, a').forEach(element => {
+            element.addEventListener('mouseenter', () => {
+                element.style.transform = 'scale(1.05)';
+            });
+            
+            element.addEventListener('mouseleave', () => {
+                element.style.transform = 'scale(1)';
+            });
+        });
+
+        // Dynamic gradient animation
+        let gradientAngle = 0;
+        setInterval(() => {
+            gradientAngle += 1;
+            const gradientBg = document.querySelector('.gradient-bg');
+            if (gradientBg) {
+                gradientBg.style.background = `linear-gradient(${gradientAngle}deg, #000000, #1a1a1a, #2e992e, #015101)`;
+            }
+        }, 100);
+    </script>
+</body>
+</html>
