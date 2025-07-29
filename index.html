@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spare Hub INC. - Smart Inventory Management</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./src/output.css">
 </head>
+
 <body class="bg-gray-50 overflow-x-hidden">
 
     <!-- Navigation -->
@@ -18,22 +21,29 @@
                 <div class="flex items-center animate-fade-in-scale">
                     <a href="./index.html" class="text-2xl font-bold text-brand">
                         <img src="./images/Spare Hub.webp" alt="Spare Hub" class="h-8 rounded-lg">
-                </a>
+                    </a>
                 </div>
-                
+
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="./index.html" class="text-gray-100 hover:text-brand hover-float transition-all duration-300 font-semibold">Home</a>
-                    <a href="./about.html" class="text-gray-100 hover:text-brand hover-float transition-all duration-300 font-semibold">About Us</a>
-                    <a href="./contact.html" class="text-gray-100 hover:text-brand hover-float transition-all duration-300 font-semibold">Contact Us</a>
-                    <button class="bg-brand text-white px-6 py-2 rounded-full hover:bg-brand hover-scale font-semibold animate-glow">
+                    <a href="./index.html"
+                        class="text-gray-100 hover:text-brand hover-float transition-all duration-300 font-semibold">Home</a>
+                    <a href="./about.html"
+                        class="text-gray-100 hover:text-brand hover-float transition-all duration-300 font-semibold">About
+                        Us</a>
+                    <a href="./contact.html"
+                        class="text-gray-100 hover:text-brand hover-float transition-all duration-300 font-semibold">Contact
+                        Us</a>
+                    <a href="#"
+                        class="bg-brand text-white px-6 py-2 rounded-full hover:bg-brand hover-scale font-semibold animate-glow">
                         Get Started
-                    </button>
+                    </a>
                 </div>
-                
+
                 <div class="md:hidden">
-                    <button class="text-gray-100 hover:text-brand animate-pulse-custom">
+                    <button class="text-gray-100 hover:text-brand animate-pulse-custom mobile-menu-btn">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
                 </div>
@@ -41,8 +51,20 @@
         </div>
     </nav>
 
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden md:hidden fixed top-16 left-0 right-0 bg-black z-40 py-4 px-6 shadow-xl animate-slide-in-down">
+        <div class="flex flex-col space-y-4 justify-center text-center items-center">
+            <a href="./index.html" class="text-gray-100 hover:text-brand text-base py-2">Home</a>
+            <a href="./about.html" class="text-gray-100 hover:text-brand text-base py-2">About Us</a>
+            <a href="./contact.html" class="text-gray-100 hover:text-brand text-base py-2">Contact Us</a>
+            <button class="bg-brand text-white px-20 py-2 rounded-full font-semibold mt-2 hover:bg-green-700">
+                Get Started
+            </button>
+        </div>
+    </div>
+
     <!-- Hero Section -->
-    <section class="gradient-bg min-h-screen flex items-center pt-20 relative z-10">
+    <section class="gradient-bg min-h-screen flex items-center pt-32 pb-20 relative z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div class="text-white animate-slide-in-left">
@@ -53,18 +75,20 @@
                         <span class=" block text-brand">MANAGEMENT</span>
                     </h1>
                     <p class="text-lg  mb-8 opacity-90 animate-slide-in-up delay-200">
-                        Revolutionize your inventory management with AI-powered insights, real-time tracking, and automated workflows.
+                        Revolutionize your inventory management with AI-powered insights, real-time tracking, and
+                        automated workflows.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 animate-slide-in-up delay-300">
-                        <button class="bg-white text-black px-8 py-4 rounded-full font-semibold hover-scale hover-glow">
+                        <a href="https://demo.sparehub.co/" target="_blank" class="bg-white text-black px-8 py-4 rounded-full font-semibold hover-scale hover-glow">
                             Start Free Trial
-                        </button>
-                        <button class="border-2 border-brand text-brand px-8 py-4 rounded-full font-semibold hover:bg-brand hover:text-black hover-scale">
+                        </a>
+                        <a href="#"  id="watchDemoBtn"
+                            class="border-2 border-brand text-brand px-8 py-4 rounded-full font-semibold hover-scale">
                             Watch Demo
-                        </button>
+                    </a>
                     </div>
                 </div>
-                
+
                 <div class="animate-slide-in-right m-2">
                     <div class="relative">
                         <div class="glass-effect p-8 rounded-2xl animate-float">
@@ -72,12 +96,12 @@
                                 <div class="bg-white/20 p-4 rounded-lg text-center animate-bounce-custom">
                                     <div class="text-3xl mb-2">📈</div>
                                     <div class="text-white font-semibold">Sales Up</div>
-                                    <div class="text-white/80">+25%</div>
+                                    <!-- <div class="text-white/80">+25%</div> -->
                                 </div>
                                 <div class="bg-white/20 p-4 rounded-lg text-center animate-bounce-custom delay-100">
                                     <div class="text-3xl mb-2">⚡</div>
                                     <div class="text-white font-semibold">Efficiency</div>
-                                    <div class="text-white/80">+40%</div>
+                                    <!-- <div class="text-white/80">+40%</div> -->
                                 </div>
                             </div>
                             <div class="bg-white/20 p-4 rounded-lg animate-pulse-custom">
@@ -90,12 +114,14 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Floating Elements -->
-                        <div class="absolute -top-4 -right-4 w-20 h-20 bg-yellow-400 rounded-full animate-bounce-custom delay-200 flex items-center justify-center text-2xl">
+                        <div
+                            class="absolute -top-4 -right-4 md:w-20 md:h-20 w-16 h-16 bg-yellow-400 rounded-full animate-bounce-custom delay-200 flex items-center justify-center text-2xl">
                             💰
                         </div>
-                         <div class="absolute -bottom-4 -left-4 w-16 h-16 bg-brand rounded-full animate-float delay-300 flex items-center justify-center text-xl">
+                        <div
+                            class="absolute -bottom-4 -left-4 md:w-16 md:h-16 w-14 h-14 bg-brand rounded-full animate-float delay-300 flex items-center justify-center text-xl">
                             📊
                         </div>
                     </div>
@@ -105,69 +131,208 @@
     </section>
 
     <!-- Features Section -->
-    <section    class="py-20 bg-white pt-[20rem]">
+    <section class="py-20 bg-white pt-[20rem]">
         <div class=" mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 animate-fade-in-scale">
                 <h2 class="text-4xl font-bold text-green-800 mb-4">Powerful Features</h2>
                 <div class="border-b-2 border-green-900 md:w-[30%]  mx-auto mb-2"></div>
-                <p class="text-xl text-gray-600 font-semibold">Everything you need to manage your inventory efficiently</p>
+                <p class="text-xl text-gray-600 font-semibold">Everything you need to manage your inventory efficiently
+                </p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="p-8 rounded-2xl bg-gradient-to-br from-green-50 to-green-100 hover-glow hover-scale animate-slide-in-up">
-                    <div class="w-16 h-16 bg-brand rounded-2xl flex items-center justify-center mb-6 animate-bounce-custom">
+                <div
+                    class="p-8 rounded-2xl bg-gradient-to-br from-green-50 to-green-100 hover-glow hover-scale animate-slide-in-up">
+                    <div
+                        class="w-16 h-16 bg-brand rounded-2xl flex items-center justify-center mb-6 animate-bounce-custom">
                         <i class="fas fa-boxes text-2xl text-white"></i>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-4">Stock Management</h3>
-                    <p class="text-gray-700 text-[15px]">Categorizing spare parts and tracking their availability. Adjusting stock levels based on purchases and sales.</p>
+                    <p class="text-gray-700 text-[15px]">Categorizing spare parts and tracking their availability.
+                        Adjusting stock levels based on purchases and sales.</p>
                 </div>
-                
-                <div class="p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-blue-100 hover-glow hover-scale animate-slide-in-up delay-100">
-                    <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mb-6 animate-bounce-custom delay-100">
+
+                <div
+                    class="p-8 rounded-2xl bg-gradient-to-br from-blue-50 to-blue-100 hover-glow hover-scale animate-slide-in-up delay-100">
+                    <div
+                        class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mb-6 animate-bounce-custom delay-100">
                         <i class="fas fa-shopping-cart text-2xl text-white"></i>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-4">Purchase & Sale Management</h3>
-                    <p class="text-gray-600 text-[15px]">Importing purchase and sale data efficiently. Viewing transaction history and vendor details.</p>
+                    <p class="text-gray-600 text-[15px]">Importing purchase and sale data efficiently. Viewing
+                        transaction history and vendor details.</p>
                 </div>
-                
-                <div class="p-8 rounded-2xl bg-gradient-to-br from-purple-50 to-purple-100 hover-glow hover-scale animate-slide-in-up delay-200">
-                    <div class="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center mb-6 animate-bounce-custom delay-200">
+
+                <div
+                    class="p-8 rounded-2xl bg-gradient-to-br from-purple-50 to-purple-100 hover-glow hover-scale animate-slide-in-up delay-200">
+                    <div
+                        class="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center mb-6 animate-bounce-custom delay-200">
                         <i class="fas fa-search text-2xl text-white"></i>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-4">Inventory Tracking</h3>
-                    <p class="text-gray-600 text-[15px]">Monitoring stock movements and current availability. Identifying low-stock items and managing reordering.</p>
+                    <p class="text-gray-600 text-[15px]">Monitoring stock movements and current availability.
+                        Identifying low-stock items and managing reordering.</p>
                 </div>
-                
-                <div class="p-8 rounded-2xl bg-gradient-to-br from-orange-50 to-orange-100 hover-glow hover-scale animate-slide-in-up delay-300">
-                    <div class="w-16 h-16 bg-orange-600 rounded-2xl flex items-center justify-center mb-6 animate-bounce-custom delay-300">
+
+                <div
+                    class="p-8 rounded-2xl bg-gradient-to-br from-orange-50 to-orange-100 hover-glow hover-scale animate-slide-in-up delay-300">
+                    <div
+                        class="w-16 h-16 bg-orange-600 rounded-2xl flex items-center justify-center mb-6 animate-bounce-custom delay-300">
                         <i class="fas fa-chart-bar text-2xl text-white"></i>
                     </div>
                     <h3 class="text-lg font-bold text-gray-900 mb-4">Analytics & Reports</h3>
-                    <p class="text-gray-600 text-[15px]">Generating real-time insights on stock levels, sales trends, and purchase patterns.</p>
+                    <p class="text-gray-600 text-[15px]">Generating real-time insights on stock levels, sales trends,
+                        and purchase patterns.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="py-20 gradient-bg">
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-green-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center text-white">
-                <div class="animate-slide-in-up">
-                    <div class="text-5xl font-bold mb-2 animate-pulse-custom text-brand" id="stat1">0</div>
-                    <div class="text-xl opacity-90 font-semibold">Happy Customers</div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="animate-slide-in-left">
+                    <h2 class="md:text-5xl text-3xl font-bold text-green-800 mb-6">About Spare Hub INC.</h2>
+                    <p class="text-gray-600 mb-6 text-base">
+                        We are a cutting-edge technology company specializing in intelligent inventory management
+                        solutions.
+                        Our mission is to empower businesses with smart, efficient, and automated inventory systems.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-clock text-brand text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 text-lg">Real-Time Tracking</h4>
+                                <p class="text-gray-600">Monitor inventory changes instantly across all locations</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                                <i class="fas fa-cogs text-brand text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 text-lg">Automated Workflows</h4>
+                                <p class="text-gray-600">Streamline processes and reduce manual intervention</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="animate-slide-in-up delay-100">
-                    <div class="text-5xl font-bold mb-2 animate-pulse-custom text-brand" id="stat2">0</div>
-                    <div class="text-xl opacity-90 font-semibold">Products Managed</div>
+                <div class="animate-slide-in-right">
+                    <div class="relative">
+                        <div
+                            class="bg-gradient-to-br from-emerald-400 via-green-500 to-teal-600 rounded-3xl p-4 text-white shadow-2xl glow-effect relative overflow-hidden">
+                        
+                            <!-- Content -->
+                            <div class="relative z-10">
+                                <div class="text-center mb-4 md:py-5 py-1 ">
+                                    <h3
+                                        class="md:text-4xl text-3xl font-bold mb-2 mt-3 bg-gradient-to-r from-white to-green-100 bg-clip-text text-transparent">
+                                        WHY CHOOSE US?
+                                    </h3>
+                                    <p class="text-base opacity-90 max-w-2xl mx-auto">
+                                        Join thousands of satisfied customers who trust our reliable, innovative
+                                        solutions
+                                    </p>
+                                </div>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <!-- Uptime Card -->
+                                    <div
+                                        class="stat-card bg-white/10 backdrop-blur-sm rounded-2xl p-1 border border-white/20 hover:border-white/40 text-center">
+                                        <div class="icon-container mb-4">
+                                            <div
+                                                class="w-10 h-10 mt-2 bg-emerald-500 rounded-full flex items-center justify-center mx-auto">
+                                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="stat-number text-2xl font-bold">99.9%</div>
+                                          <div class="text-sm opacity-90">Uptime</div>
+                                    </div>
+
+                                    <!-- Support Card -->
+                                    <div
+                                        class="stat-card bg-white/10 backdrop-blur-sm rounded-2xl p-1 border border-white/20 hover:border-white/40 text-center">
+                                        <div class="icon-container mb-4">
+                                            <div
+                                                class="w-10 h-10 mt-2 bg-blue-500 rounded-full flex items-center justify-center mx-auto">
+                                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="stat-number text-2xl font-bold ">24/7</div>
+                                          <div class="text-sm opacity-90">Support</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute -top-4 -right-4 md:w-20 md:h-20 w-14 h-14 bg-yellow-400 rounded-full animate-bounce-custom flex items-center justify-center text-2xl">
+                            ⭐</div>
+                    </div>
                 </div>
-                <div class="animate-slide-in-up delay-200">
-                    <div class="text-5xl font-bold mb-2 animate-pulse-custom text-brand" id="stat3">0</div>
-                    <div class="text-xl opacity-90 font-semibold">Countries</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-green-800 mb-2">How It Works</h2>
+                <div class="border-b-2 border-green-900 md:w-[25%] mx-auto mb-2"></div>
+                <p class="text-lg text-gray-600 font-semibold">Simple steps to transform your inventory management</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover-glow transition-all">
+                    <div
+                        class="w-16 h-16 bg-brand rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6">
+                        1</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Setup Your Account</h3>
+                    <p class="text-gray-700 mb-4">Create your account and connect your inventory sources in minutes with
+                        our guided setup process.</p>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <i class="fas fa-clock mr-2"></i>
+                        <span>5 minutes setup</span>
+                    </div>
                 </div>
-                <div class="animate-slide-in-up delay-300">
-                    <div class="text-5xl font-bold mb-2 animate-pulse-custom text-brand" id="stat4">0</div>
-                    <div class="text-xl opacity-90 font-semibold">Uptime</div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover-glow transition-all">
+                    <div
+                        class="w-16 h-16 bg-brand rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6">
+                        2</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Import Your Data</h3>
+                    <p class="text-gray-700 mb-4">Upload your existing inventory data or connect directly to your
+                        eCommerce platforms and POS systems.</p>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <i class="fas fa-clock mr-2"></i>
+                        <span>Automatic sync</span>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover-glow transition-all">
+                    <div
+                        class="w-16 h-16 bg-brand rounded-full flex items-center justify-center text-white text-2xl font-bold mb-6">
+                        3</div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Optimize & Grow</h3>
+                    <p class="text-gray-700 mb-4">Use our AI-powered insights to optimize stock levels, reduce waste,
+                        and increase profitability.</p>
+                    <div class="flex items-center text-sm text-gray-500">
+                        <i class="fas fa-clock mr-2"></i>
+                        <span>Continuous improvement</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -180,187 +345,351 @@
                 <h2 class="text-4xl font-bold text-gray-900 mb-4">Simple Pricing</h2>
                 <p class="text-xl text-gray-600">Choose the perfect plan for your business</p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
                 <div class="bg-white p-8 rounded-2xl shadow-lg hover-glow hover-scale animate-slide-in-up">
                     <h3 class="text-2xl font-bold text-gray-900 mb-4">Starter</h3>
                     <div class="text-4xl font-bold text-brand mb-6">
-                        $29<span class="text-lg text-gray-500">/month</span>
+                        Comming Soon<span class="text-lg text-gray-500"></span>
                     </div>
                     <ul class="space-y-3 mb-8">
-                        <li class="flex items-center"><span class="text-brand mr-2">✓</span>Up to 1,000 products</li>
+                        <li class="flex items-center"><span class="text-brand mr-2">✓</span>Up to 100 products</li>
                         <li class="flex items-center"><span class="text-brand mr-2">✓</span>Basic analytics</li>
                         <li class="flex items-center"><span class="text-brand mr-2">✓</span>Email support</li>
-                        <li class="flex items-center"><span class="text-brand mr-2">✓</span>Mobile app</li>
                     </ul>
-                    <button class="w-full bg-gray-100 text-gray-900 py-3 rounded-full font-semibold hover:bg-gray-200 hover-scale">
+                    <button
+                        class="w-full bg-gray-200 text-gray-900 py-3 rounded-full font-semibold hover:bg-gray-200 hover-scale">
                         Get Started
                     </button>
                 </div>
-                
-                <div class="bg-brand p-8 rounded-2xl shadow-lg hover-glow hover-scale animate-slide-in-up delay-100 relative">
-                    <div class="absolute -top-4 left-38 transform -translate-x-1/2 bg-yellow-400 text-gray-900 px-4 py-1 rounded-full text-sm font-semibold animate-bounce-custom">
-                        Popular
+
+                <div
+                    class="bg-brand p-8 rounded-2xl shadow-lg hover-glow hover-scale animate-slide-in-up delay-100 relative">
+                    <div class="absolute -top-4 inset-x-0 flex justify-center">
+                        <div
+                            class="bg-yellow-400 text-gray-900 px-4 py-1 rounded-full text-sm font-semibold animate-bounce-custom">
+                            Popular
+                        </div>
                     </div>
                     <h3 class="text-2xl font-bold text-white mb-4">Professional</h3>
-                    <div class="text-4xl font-bold text-white mb-6">
-                        $79<span class="text-lg text-green-200">/month</span>
-                    </div>
+                    <div class="text-4xl font-bold text-white mb-6"> Coming Soon<span
+                            class="text-lg text-green-200"></span> </div>
                     <ul class="space-y-3 mb-8 text-white">
-                        <li class="flex items-center"><span class="text-yellow-400 mr-2">✓</span>Up to 10,000 products</li>
+                        <li class="flex items-center"><span class="text-yellow-400 mr-2">✓</span>Up to 1000 products
+                        </li>
                         <li class="flex items-center"><span class="text-yellow-400 mr-2">✓</span>Advanced analytics</li>
                         <li class="flex items-center"><span class="text-yellow-400 mr-2">✓</span>Priority support</li>
-                        <li class="flex items-center"><span class="text-yellow-400 mr-2">✓</span>API access</li>
-                        <li class="flex items-center"><span class="text-yellow-400 mr-2">✓</span>AI predictions</li>
-                    </ul>
-                    <button class="w-full bg-white text-brand py-3 rounded-full font-semibold hover:bg-gray-100 hover-scale">
-                        Get Started
-                    </button>
+                    </ul> <button
+                        class="w-full bg-white text-brand py-3 rounded-full font-semibold hover:bg-gray-100 hover-scale">
+                        Get Started </button>
                 </div>
-                
+
                 <div class="bg-white p-8 rounded-2xl shadow-lg hover-glow hover-scale animate-slide-in-up delay-200">
                     <h3 class="text-2xl font-bold text-gray-900 mb-4">Enterprise</h3>
                     <div class="text-4xl font-bold text-brand mb-6">
-                        $199<span class="text-lg text-gray-500">/month</span>
+                        Comming Soon<span class="text-lg text-gray-500"></span>
                     </div>
                     <ul class="space-y-3 mb-8">
                         <li class="flex items-center"><span class="text-brand mr-2">✓</span>Unlimited products</li>
                         <li class="flex items-center"><span class="text-brand mr-2">✓</span>Custom analytics</li>
                         <li class="flex items-center"><span class="text-brand mr-2">✓</span>24/7 support</li>
-                        <li class="flex items-center"><span class="text-brand mr-2">✓</span>Custom integrations</li>
-                        <li class="flex items-center"><span class="text-brand mr-2">✓</span>White-label option</li>
                     </ul>
-                    <button class="w-full bg-gray-100 text-gray-900 py-3 rounded-full font-semibold hover:bg-gray-200 hover-scale">
+                    <button
+                        class="w-full bg-gray-200 text-gray-900 py-3 rounded-full font-semibold hover:bg-gray-200 hover-scale">
                         Contact Sales
                     </button>
                 </div>
             </div>
         </div>
-    \</section>
+        \
+    </section>
 
-    <!-- Contact Section -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-
-                <div class="animate-slide-in-left">
-                    <h2 class="text-4xl font-bold text-green-800 mb-6">Get in Touch</h2>
-                    <p class="text-lg font-semibold text-gray-600 mb-8">Ready to transform your inventory management? Let's talk!</p>
-                    
-                    <div class="space-y-4">
-                        <div class="flex items-center hover-float">
-                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4 animate-pulse-custom">
-                                <i class="fas fa-envelope text-brand"></i>
-                            </div>
-                            <div>
-                                <div class="font-semibold">Email</div>
-                                <div class="text-gray-600">info@sparehub.com</div>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-center hover-float">
-                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4 animate-pulse-custom delay-100">
-                                <i class="fas fa-phone text-brand"></i>
-                            </div>
-                            <div>
-                                <div class="font-semibold">Phone</div>
-                                <div class="text-gray-600">+91 9838 006 677</div>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-center hover-float">
-                            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4 animate-pulse-custom delay-200">
-                                <i class="fas fa-map-marker-alt text-brand"></i>
-                            </div>
-                            <div>
-                                <div class="font-semibold">Address</div>
-                                <div class="text-gray-600">123 Krishna Nagar, Lucknow 226012</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="animate-slide-in-right">
-                    <form class="space-y-6">
-                        <div>
-                            <input type="text" placeholder="Your Name" class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand focus:border-transparent hover-glow">
-                        </div>
-                        <div>
-                            <input type="email" placeholder="Your Email" class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand focus:border-transparent hover-glow">
-                        </div>
-                        <div>
-                            <input type="text" placeholder="Subject" class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand focus:border-transparent hover-glow">
-                        </div>
-                        <div>
-                            <textarea rows="5" placeholder="Your Message" class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand focus:border-transparent hover-glow"></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-brand text-white py-4 rounded-lg font-semibold hover:bg-brand hover-scale animate-glow">
-                            Send Message
-                        </button>
-                    </form>
-                </div>
-
+      <!-- CTA Section -->
+    <section class="py-20 gradient-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Ready to Transform Your Inventory Management?</h2>
+            <p class="md:text-xl text-base text-gray-200 mb-8 max-w-3xl mx-auto">Join thousands of businesses optimizing their inventory with Spare Hub's powerful platform.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="./contact.html"
+                    class="border-2 border-white text-white md:px-8 md:py-4 px-4 py-2  rounded-full font-semibold hover:bg-white hover:text-black hover-scale">
+                    Contact Us
+                </a>
             </div>
         </div>
     </section>
 
+     <!-- Contact Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="animate-slide-in-left">
+                    <h2 class="text-4xl font-bold text-green-800 mb-6 md:text-start text-center">Get in Touch</h2>
+                    <p class="md:text-lg text-base font-semibold text-gray-600 mb-8 md:text-start text-center">Have questions or want to learn more? Our team is here to help you with any inquiries about our inventory management solutions.</p>
+
+                  <div class="space-y-6">
+    <div class="flex flex-col items-center md:items-start text-center md:text-left md:flex-row md:space-x-6 space-y-4 md:space-y-0">
+        <div class="flex-shrink-0">
+            <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center animate-pulse">
+                <i class="fas fa-envelope text-brand text-xl"></i>
+            </div>
+        </div>
+        <div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Email Us</h3>
+            <a href="mailto:info@sparehub.com" class="text-brand hover:underline font-medium">info@sparehub.com</a>
+        </div>
+    </div>
+ 
+    <div class="flex flex-col items-center md:items-start text-center md:text-left md:flex-row md:space-x-6 space-y-4 md:space-y-0">
+        <div class="flex-shrink-0">
+            <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center animate-pulse-custom delay-100">
+                <i class="fas fa-phone text-brand text-xl"></i>
+            </div>
+        </div>
+        <div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Call Us</h3>
+            <a href="tel:+919838014936" class="text-brand hover:underline font-medium">+91 9838 014 936</a>
+        </div>
+    </div>
+ 
+    <div class="flex flex-col items-center md:items-start text-center md:text-left md:flex-row md:space-x-6 space-y-4 md:space-y-0">
+        <div class="flex-shrink-0">
+            <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center animate-pulse-custom delay-200">
+                <i class="fas fa-map-marker-alt text-brand text-xl"></i>
+            </div>
+        </div>
+        <div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Visit Us</h3>
+            <address class="text-gray-600 not-italic">
+                302, Silver Oak Apartments<br>
+                20, Gokhley Marg, Hazratganj<br>
+                Lucknow 226001
+            </address>
+        </div>
+    </div>
+</div>
+                </div>
+
+                <div class="animate-slide-in-right">
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                        <div class="p-8">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-6">Send Us a Message</h3>
+                            <form class="space-y-6">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                                        <input type="text" id="name" placeholder="Enter Your Name" required
+                                            class="contact-input w-full p-3 border rounded-lg focus:ring-2 focus:ring-brand focus:border-transparent">
+                                    </div>
+                                    <div>
+                                        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                                        <input type="email" id="email" placeholder="Enter Your Mail" required
+                                            class="contact-input w-full p-3 border rounded-lg focus:ring-2 focus:ring-brand focus:border-transparent">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                                    <input type="text" id="subject" placeholder="Subject"
+                                        class="contact-input w-full p-3 border rounded-lg focus:ring-2 focus:ring-brand focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Your Message</label>
+                                    <textarea id="message" rows="2" placeholder="Message"
+                                        class="contact-input w-full p-3 border rounded-lg focus:ring-2 focus:ring-brand focus:border-transparent"></textarea>
+                                </div>
+                                <div>
+                                    <button type="submit"
+                                        class="w-full bg-brand text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors hover-scale animate-glow">
+                                        Send Message
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- FAQ Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-green-800 mb-4">Frequently Asked Questions</h2>
+                <div class="border-b-2 border-green-900 md:w-[30%] mx-auto mb-2"></div>
+                <p class="text-base text-gray-600">Find answers to common questions about Spare Hub</p>
+            </div>
+            
+            <div class="space-y-6">
+                <div class="border border-green-300 rounded-xl overflow-hidden hover-glow">
+                    <button class="faq-toggle w-full text-left p-6 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold text-gray-900">How does the implementation process work?</h3>
+                            <i class="fas fa-chevron-down text-brand transition-transform"></i>
+                        </div>
+                        <div class="faq-content mt-3 hidden">
+                            <p class="text-gray-600">
+                                Our implementation process is designed to be seamless. After signup, you'll work with our onboarding specialist who will guide you through data migration, system configuration, and team training. Most customers are fully operational within 2 weeks.
+                            </p>
+                        </div>
+                    </button>
+                </div>
+                  
+                <div class="border border-green-300 rounded-xl overflow-hidden hover-glow">
+                    <button class="faq-toggle w-full text-left p-6 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold text-gray-900">Is my data secure with Spare Hub?</h3>
+                            <i class="fas fa-chevron-down text-brand transition-transform"></i>
+                        </div>
+                        <div class="faq-content mt-3 hidden">
+                            <p class="text-gray-600">
+                                Absolutely. We use enterprise-grade security measures including 256-bit encryption, regular security audits, and SOC 2 compliance. Your data is backed up daily and stored in secure AWS data centers. We also offer role-based access controls for your team.
+                            </p>
+                        </div>
+                    </button>
+                </div>
+                
+                <div class="border border-green-300 rounded-xl overflow-hidden hover-glow">
+                    <button class="faq-toggle w-full text-left p-6 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold text-gray-900">Can I try before I buy?</h3>
+                            <i class="fas fa-chevron-down text-brand transition-transform"></i>
+                        </div>
+                        <div class="faq-content mt-3 hidden">
+                            <p class="text-gray-600">
+                                Yes! We offer a 14-day free trial with full access to all features. No credit card required. You can import sample data or connect to your live systems to see how Spare Hub works with your actual inventory.
+                            </p>
+                        </div>
+                    </button>
+                </div>
+                
+                <div class="border border-green-300 rounded-xl overflow-hidden hover-glow">
+                    <button class="faq-toggle w-full text-left p-6 focus:outline-none">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold text-gray-900">What kind of support do you offer?</h3>
+                            <i class="fas fa-chevron-down text-brand transition-transform"></i>
+                        </div>
+                        <div class="faq-content mt-3 hidden">
+                            <p class="text-gray-600">
+                                All plans include email support with 24-hour response times. Professional and Enterprise plans include priority phone and chat support. We also offer extensive documentation, video tutorials, and regular training webinars to help you get the most from Spare Hub.
+                            </p>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center">
+                <p class="text-gray-600 mb-4">Still have questions?</p>
+                <a href="./contact.html" class="inline-flex items-center bg-brand text-white px-6 py-3 rounded-full font-semibold hover:bg-green-700 hover-scale">
+                    Contact Support
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+     <!-- Video Modal -->
+    <div id="videoModal" class="fixed inset-0 bg-opacity-80 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <!-- Modal Content -->
+        <div class="bg-white rounded-3xl p-5 max-w-4xl w-full max-h-[90vh] relative shadow-2xl transform transition-all duration-300 scale-95 opacity-0" id="modalContent">  
+            <!-- Close Button -->
+            <button
+                id="closeModal"
+                class="absolute -top-1 right-0 flex items-center justify-center font-bold shadow-lg hover:scale-110 transition-all duration-200">
+                <i class="fa-solid fa-square-xmark text-green-700 text-3xl"></i>
+            </button>
+           
+            <!-- Video Container -->
+            <div class="relative w-full aspect-video rounded-2xl overflow-hidden shadow-lg">
+                <video
+                    id="demoVideo"
+                    class="w-full h-full object-cover"
+                    controls
+                    preload="metadata">
+                    <source src="images/33384-397122094_small.mp4" type="video/mp4">
+                </video>
+                <!-- Loading Spinner -->
+                <div id="videoLoader" class="absolute inset-0 bg-black bg-opacity-50 items-center justify-center hidden">
+                    <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-white"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="bg-black text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="animate-fade-in-scale">
                     <div class="text-2xl font-bold mb-4">
-                        <img src="./images/Spare Hub.webp" alt="Spare Hub" class="h-8">
+                        <img src="./images/Spare Hub.webp" alt="Spare Hub" class="h-12">
                     </div>
-                    <p class="text-gray-400">Spare Hub INC. inventory management for modern businesses.</p>
+                    <p class="text-gray-400"> Spare Hub INC. Inventory Management Revolutionize your inventory
+                        management with AI-powered insights, real-time tracking, and automated workflows. </p>
                 </div>
-                
-                <div class="animate-slide-in-up">
-                    <h3 class="text-lg font-bold mb-4 text-[#108e10]">Product</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-brand hover-float font-semibold">Features</a></li>
-                        <li><a href="#" class="hover:text-brand hover-float font-semibold">Pricing</a></li>
-                        <li><a href="#" class="hover:text-brand hover-float font-semibold">API</a></li>
-                        <li><a href="#" class="hover:text-brand hover-float font-semibold">Documentation</a></li>
-                    </ul>
-                </div>
-                
-                <div class="animate-slide-in-up delay-100">
+
+                <div class="animate-slide-in-up delay-100 md:mx-auto">
                     <h3 class="text-lg font-bold mb-4 text-[#108e10]">Links</h3>
                     <ul class="space-y-2 text-gray-400">
                         <li><a href="./index.html" class="hover:text-brand hover-float font-semibold">Home</a></li>
                         <li><a href="./about.html" class="hover:text-brand hover-float font-semibold">About Us</a></li>
-                        <li><a href="./contact.html" class="hover:text-brand hover-float font-semibold">Contact Us</a></li>
-                        <li><a href="./privacy.html" class="hover:text-brand hover-float font-semibold">Privacy & Policy</a></li>
-                        <li><a href="./terms.html" class="hover:text-brand hover-float font-semibold">Terms & Condition</a></li>
+                        <li><a href="./contact.html" class="hover:text-brand hover-float font-semibold">Contact Us</a>
+                        </li>
+                        <li><a href="./privacy.html" class="hover:text-brand hover-float font-semibold">Privacy &
+                                Policy</a></li>
+                        <li><a href="./terms.html" class="hover:text-brand hover-float font-semibold">Terms &
+                                Condition</a></li>
                     </ul>
                 </div>
-                
-                <div class="animate-slide-in-up delay-200">
+
+                <div class="animate-slide-in-up delay-200 md:mx-auto">
                     <h3 class="text-lg font-bold mb-4 text-[#108e10]">Connect</h3>
                     <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-brand hover-scale animate-pulse-custom group">
+                        <a href="https://www.facebook.com/profile.php?id=61568944533148"
+                            class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-brand hover-scale animate-pulse-custom group">
                             <i class="fab fa-facebook text-blue-600 group-hover:text-white"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-brand hover-scale animate-pulse-custom delay-100 group">
+                        <a href="https://www.instagram.com/sparehubinc"
+                            class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-brand hover-scale animate-pulse-custom delay-100 group">
                             <i class="fab fa-instagram text-[#833AB4] group-hover:text-white"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-brand hover-scale animate-pulse-custom delay-200 group">
-                            <i class="fa-brands fa-youtube text-red-500 group-hover:text-white"></i>
                         </a>
                     </div>
                 </div>
             </div>
-            
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 animate-fade-in-scale">
-                <p>&copy; 2024 Marv Softwares India Private Limited. All rights reserved.</p>
+
+            <div
+                class="mt-8 border-t border-gray-800 pt-6 text-center md:flex justify-between text-gray-400 animate-fade-in-scale">
+                <p class="text-sm sm:text-base">
+                    &copy; 2025 <strong>SpareHubINC.</strong> All rights reserved.
+                </p>
+                <p class="text-xs sm:text-sm mt-1">
+                    Developed by <strong>Marv Softwares India Private Limited.</strong>
+                </p>
             </div>
+
         </div>
     </footer>
 
-   <script>
-        // Smooth scrolling for navigation links
+    <script>
+       
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+ 
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.querySelector('.faq-content');
+                const icon = button.querySelector('i');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+ 
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -373,60 +702,7 @@
                 }
             });
         });
-
-        // Counter animation for stats
-        function animateCounter(element, target, duration = 2000) {
-            let start = 0;
-            const increment = target / (duration / 16);
-            let current = start;
-            
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    current = target;
-                    clearInterval(timer);
-                }
-                
-                if (element.id === 'stat4') {
-                    element.textContent = Math.floor(current) + '%';
-                } else {
-                    element.textContent = Math.floor(current).toLocaleString();
-                }
-            }, 16);
-        }
-
-        // Initialize counters when they come into view
-        const observerOptions = {
-            threshold: 0.5,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const element = entry.target;
-                    let target;
-                    
-                    switch(element.id) {
-                        case 'stat1': target = 10000; break;
-                        case 'stat2': target = 5000000; break;
-                        case 'stat3': target = 150; break;
-                        case 'stat4': target = 99; break;
-                    }
-                    
-                    animateCounter(element, target);
-                    observer.unobserve(element);
-                }
-            });
-        }, observerOptions);
-
-        // Observe stat elements
-        ['stat1', 'stat2', 'stat3', 'stat4'].forEach(id => {
-            const element = document.getElementById(id);
-            if (element) observer.observe(element);
-        });
-
-        // Floating particles animation
+ 
         function createParticle() {
             const particle = document.createElement('div');
             particle.className = 'fixed w-2 h-2 rounded-full opacity-30 pointer-events-none z-10';
@@ -435,18 +711,16 @@
             particle.style.top = window.innerHeight + 'px';
             particle.style.animation = `floatUp ${8 + Math.random() * 4}s linear infinite`;
             document.body.appendChild(particle);
-            
+
             setTimeout(() => {
                 if (particle.parentNode) {
                     particle.remove();
                 }
             }, 12000);
         }
-
-        // Create particles periodically
+ 
         setInterval(createParticle, 2000);
-
-        // Add floating particles CSS
+ 
         const particleStyle = document.createElement('style');
         particleStyle.textContent = `
             @keyframes floatUp {
@@ -467,8 +741,7 @@
             }
         `;
         document.head.appendChild(particleStyle);
-
-        // Interactive background effect
+  
         document.addEventListener('mousemove', (e) => {
             const cursor = document.createElement('div');
             cursor.className = 'fixed w-4 h-4 bg-blue-400 rounded-full opacity-20 pointer-events-none';
@@ -476,13 +749,12 @@
             cursor.style.top = e.clientY - 8 + 'px';
             cursor.style.animation = 'fadeOut 1s ease-out forwards';
             document.body.appendChild(cursor);
-            
+
             setTimeout(() => {
                 cursor.remove();
             }, 1000);
         });
-
-        // Add fade out animation for cursor trail
+  
         const cursorStyle = document.createElement('style');
         cursorStyle.textContent = `
             @keyframes fadeOut {
@@ -497,68 +769,33 @@
             }
         `;
         document.head.appendChild(cursorStyle);
-
-        // Parallax effect for hero section (fixed)
+ 
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
             const parallax = document.querySelector('.gradient-bg');
-            
+
             if (parallax && scrolled < window.innerHeight) {
                 const speed = scrolled * 0.3;
                 parallax.style.transform = `translateY(${speed}px)`;
             }
         });
-
-        // Loading animation
-        window.addEventListener('load', () => {
-            // Add stagger animation to elements
-            const elements = document.querySelectorAll('.animate-slide-in-up, .animate-slide-in-left, .animate-slide-in-right');
-            elements.forEach((el, index) => {
-                el.style.animationDelay = `${index * 0.1}s`;
-            });
-        });
-
-        // Mobile menu toggle
-        const mobileMenuBtn = document.querySelector('.md\\:hidden button');
-        const mobileMenu = document.createElement('div');
-        mobileMenu.className = 'md:hidden bg-black shadow-lg absolute top-full left-0 right-0 hidden';
-        mobileMenu.innerHTML = `
-            <div class="px-4 py-4 space-y-2 text-center">
-                <a href="./index.html" class="block py-2 text-gray-200 hover:text-blue-600">Home</a>
-                <a href="./about.html" class="block py-2 text-gray-200 hover:text-blue-600">About Us</a>
-                <a href="./contact.html" class="block py-2 text-gray-200 hover:text-blue-600">Contact Us</a>
-                <button class="w-full bg-green-800 text-white px-6 py-2 rounded-full hover:bg-green-900 mt-2">
-                    Get Started
-                </button>
-            </div>
-        `;
-
-        if (mobileMenuBtn) {
-            mobileMenuBtn.parentNode.appendChild(mobileMenu);
-            mobileMenuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        }
-
-        // Form submission with animation
-        const contactForm = document.querySelector('#contact form');
+ 
+        const contactForm = document.querySelector('form');
         if (contactForm) {
             contactForm.addEventListener('submit', (e) => {
                 e.preventDefault();
                 const submitBtn = contactForm.querySelector('button[type="submit"]');
                 const originalText = submitBtn.textContent;
-                
-                // Animate button
+ 
                 submitBtn.textContent = 'Sending...';
                 submitBtn.classList.add('animate-pulse-custom');
                 submitBtn.disabled = true;
-                
-                // Simulate form submission
+ 
                 setTimeout(() => {
                     submitBtn.textContent = 'Message Sent! ✓';
                     submitBtn.classList.remove('animate-pulse-custom');
                     submitBtn.classList.add('bg-green-600');
-                    
+
                     setTimeout(() => {
                         submitBtn.textContent = originalText;
                         submitBtn.classList.remove('bg-green-600');
@@ -568,8 +805,7 @@
                 }, 1500);
             });
         }
-
-        // Intersection Observer for scroll animations
+ 
         const scrollObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -579,48 +815,11 @@
         }, {
             threshold: 0.1
         });
-
-        // Observe all sections for scroll animations
+ 
         document.querySelectorAll('section').forEach(section => {
             scrollObserver.observe(section);
         });
-
-        // Add typing effect to hero subtitle
-        function typeWriter(element, text, speed = 100) {
-            let i = 0;
-            element.innerHTML = '';
-            
-            function type() {
-                if (i < text.length) {
-                    element.innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(type, speed);
-                }
-            }
-            type();
-        }
-
-        // Initialize typing effect after page load
-        setTimeout(() => {
-            const subtitle = document.querySelector('#home p');
-            if (subtitle) {
-                const originalText = subtitle.textContent;
-                typeWriter(subtitle, originalText, 50);
-            }
-        }, 4000);
-
-        // Add hover sound effect (visual feedback)
-        document.querySelectorAll('button, a').forEach(element => {
-            element.addEventListener('mouseenter', () => {
-                element.style.transform = 'scale(1.05)';
-            });
-            
-            element.addEventListener('mouseleave', () => {
-                element.style.transform = 'scale(1)';
-            });
-        });
-
-        // Dynamic gradient animation
+  
         let gradientAngle = 0;
         setInterval(() => {
             gradientAngle += 1;
@@ -630,7 +829,94 @@
             }
         }, 100);
     </script>
-    
+
+<!-- vedio modal js -->
+    <script>
+        const watchDemoBtn = document.getElementById('watchDemoBtn');
+        const videoModal = document.getElementById('videoModal');
+        const modalContent = document.getElementById('modalContent');
+        const closeModal = document.getElementById('closeModal');
+        const demoVideo = document.getElementById('demoVideo');
+        const videoLoader = document.getElementById('videoLoader');
+ 
+        function openModal() {
+            videoModal.classList.remove('hidden');
+            videoModal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+ 
+            setTimeout(() => {
+                modalContent.classList.remove('scale-95', 'opacity-0');
+                modalContent.classList.add('scale-100', 'opacity-100');
+            }, 10);
+     
+            videoLoader.classList.remove('hidden');
+ 
+            setTimeout(() => {
+                demoVideo.play().then(() => {
+                    videoLoader.classList.add('hidden');
+                }).catch(e => {
+                    console.log('Auto-play prevented by browser:', e);
+                    videoLoader.classList.add('hidden');
+                });
+            }, 300);
+        }
+ 
+        function closeModalFunc() {
+            modalContent.classList.add('scale-95', 'opacity-0');
+            modalContent.classList.remove('scale-100', 'opacity-100');
+           
+            setTimeout(() => {
+                videoModal.classList.add('hidden');
+                videoModal.classList.remove('flex');
+                document.body.classList.remove('overflow-hidden');
+ 
+                demoVideo.pause();
+                demoVideo.currentTime = 0;
+                videoLoader.classList.add('hidden');
+            }, 300);
+        }
+ 
+        watchDemoBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            openModal();
+        });
+        
+        closeModal.addEventListener('click', closeModalFunc);
+ 
+        videoModal.addEventListener('click', function(e) {
+            if (e.target === videoModal) {
+                closeModalFunc();
+            }
+        });
+ 
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && !videoModal.classList.contains('hidden')) {
+                closeModalFunc();
+            }
+        });
+   
+        demoVideo.addEventListener('loadstart', function() {
+            videoLoader.classList.remove('hidden');
+        });
+        
+        demoVideo.addEventListener('canplay', function() {
+            videoLoader.classList.add('hidden');
+        });
+        
+        demoVideo.addEventListener('waiting', function() {
+            videoLoader.classList.remove('hidden');
+        });
+        
+        demoVideo.addEventListener('playing', function() {
+            videoLoader.classList.add('hidden');
+        });
+        
+        demoVideo.addEventListener('error', function(e) {
+            videoLoader.classList.add('hidden');
+            console.error('Video error:', e);
+        });
+    </script>
+
 </body>
+
 </html>
-                  

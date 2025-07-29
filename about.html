@@ -5,39 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spare Hub INC. - Smart Inventory Management</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./src/output.css">
 </head>
 
 <body class="bg-gray-50">
 
-   <!-- Navigation -->
+     <!-- Navigation -->
     <nav class="fixed w-full top-0 z-50 bg-black backdrop-blur-md shadow-lg animate-slide-in-up">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <div class="flex items-center animate-fade-in-scale">
                     <a href="./index.html" class="text-2xl font-bold text-brand">
                         <img src="./images/Spare Hub.webp" alt="Spare Hub" class="h-8 rounded-lg">
-                </a>
+                    </a>
                 </div>
-                
+
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="./index.html" class="text-gray-100 hover:text-brand hover-float transition-all duration-300 font-semibold">Home</a>
-                    <a href="./about.html" class="text-gray-100 hover:text-brand hover-float transition-all duration-300 font-semibold">About Us</a>
-                    <a href="./contact.html" class="text-gray-100 hover:text-brand hover-float transition-all duration-300 font-semibold">Contact Us</a>
-                    <button class="bg-brand text-white px-6 py-2 rounded-full hover:bg-brand hover-scale font-semibold animate-glow">
+                    <a href="./index.html"
+                        class="text-gray-100 hover:text-brand hover-float transition-all duration-300 font-semibold">Home</a>
+                    <a href="./about.html"
+                        class="text-gray-100 hover:text-brand hover-float transition-all duration-300 font-semibold">About
+                        Us</a>
+                    <a href="./contact.html"
+                        class="text-gray-100 hover:text-brand hover-float transition-all duration-300 font-semibold">Contact
+                        Us</a>
+                    <a href="#"
+                        class="bg-brand text-white px-6 py-2 rounded-full hover:bg-brand hover-scale font-semibold animate-glow">
                         Get Started
-                    </button>
+                    </a>
                 </div>
-                
+
                 <div class="md:hidden">
-                    <button class="text-gray-100 hover:text-brand animate-pulse-custom">
+                    <button class="text-gray-100 hover:text-brand animate-pulse-custom mobile-menu-btn">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
                     </button>
                 </div>
@@ -45,8 +51,21 @@
         </div>
     </nav>
 
+    <!-- Mobile Menu -->
+    <div
+        class="mobile-menu hidden md:hidden fixed top-16 left-0 right-0 bg-black z-40 py-4 px-6 shadow-xl animate-slide-in-down">
+        <div class="flex flex-col space-y-4 justify-center text-center items-center">
+            <a href="./index.html" class="text-gray-100 hover:text-brand text-base py-2">Home</a>
+            <a href="./about.html" class="text-gray-100 hover:text-brand text-base py-2">About Us</a>
+            <a href="./contact.html" class="text-gray-100 hover:text-brand text-base py-2">Contact Us</a>
+            <button class="bg-brand text-white px-20 py-2 rounded-full font-semibold mt-2 hover:bg-green-700">
+                Get Started
+            </button>
+        </div>
+    </div>
+
     <!-- Hero Section -->
-    <section class="gradient-bg md:h-[600px] h-screen text-white pt-20 relative z-10 px-6 flex items-center">
+    <section class="gradient-bg md:h-[600px] h-screen text-white pt-28 pb-10 relative z-10 px-6 flex items-center">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div class="text-white animate-slide-in-left">
@@ -87,11 +106,11 @@
 
                         <!-- Floating Elements -->
                         <div
-                            class="absolute -top-4 -right-4 w-20 h-20 bg-yellow-400 rounded-full animate-bounce-custom delay-200 flex items-center justify-center text-2xl">
+                            class="absolute -top-4 -right-4 md:w-20 md:h-20 w-16 h-16 bg-yellow-400 rounded-full animate-bounce-custom delay-200 flex items-center justify-center text-2xl">
                             🏆
                         </div>
                         <div
-                            class="absolute -bottom-4 -left-4 w-16 h-16 bg-brand rounded-full animate-float delay-300 flex items-center justify-center text-xl">
+                            class="absolute -bottom-4 -left-4 md:w-16 md:h-16 w-14 h-14 bg-brand rounded-full animate-float delay-300 flex items-center justify-center text-xl">
                             📦
                         </div>
                     </div>
@@ -101,28 +120,85 @@
     </section>
 
     <!-- Mission Section -->
-    <section class="py-20 px-6 pt-[12rem]">
+    <section class="py-20 px-6 pt-[16rem]">
         <div class="max-w-7xl mx-auto">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="animate-slide-in-left">
-                    <h2 class="md:text-5xl text-3xl font-bold text-green-800 mb-6">Optimizing Inventory, Empowering Businesses</h2>
+                    <h2 class="md:text-5xl text-2xl font-bold text-green-800 mb-6">Optimizing Inventory, Empowering Businesses</h2>
                     <div></div>
-                    <p class="text-base text-gray-800 leading-relaxed mt-4 text-justify">
+                    <p class="text-sm text-gray-800 leading-relaxed mt-4 text-justify">
                       Efficient inventory management is the backbone of any successful business. At Spare Hub INC, we specialize in smart solutions designed to streamline stock tracking, optimize supply chains, and enhance operational efficiency.
                     </p>
-                    <p class="text-base text-gray-800 leading-relaxed text-justify">
+                    <p class="text-sm text-gray-800 leading-relaxed text-justify">
                         With our cutting-edge inventory tools, businesses can track stock levels in real time, minimize waste, and maximize productivity. Whether you're managing spare parts, retail products, or enterprise resources, our system is built to simplify processes and boost profitability.
                     </p>
-                      <p class="text-base text-gray-800 leading-relaxed text-justify">
+                      <p class="text-sm text-gray-800 leading-relaxed text-justify">
                         <b>Our Vision</b> Empowering businesses with precise, automated, and scalable inventory solutions, ensuring seamless stock control and data-driven decision-making.
                     </p>
-                      <p class="text-base text-gray-600 leading-relaxed text-justify">
+                      <p class="text-sm text-gray-600 leading-relaxed text-justify">
                         <b>Our Mission</b> To revolutionize inventory management through intuitive technology, efficient workflows, and real-time analytics, helping businesses reduce costs and improve stock accuracy.
                     </p>
                 </div>
-                <div class="relative animate-slide-in-right">
-                    <div class=" rounded-2xl p-8 ">
-                       <img src="./images/product-quality-concept-illustration_114360-7401.avif" alt="">
+                <div class=" animate-slide-in-right">
+                      <div class="relative">
+                        <div
+                            class="bg-gradient-to-br from-emerald-400 via-green-500 to-teal-600 rounded-3xl px-4  py-10 text-white shadow-2xl glow-effect relative overflow-hidden">
+                        
+                            <!-- Content -->
+                            <div class="relative z-10">
+                                <div class="text-center mb-4 md:py-5 py-1 ">
+                                    <h3
+                                        class="md:text-4xl text-3xl font-bold mb-2 mt-3 bg-gradient-to-r from-white to-green-100 bg-clip-text text-transparent">
+                                        WHY CHOOSE US?
+                                    </h3>
+                                    <p class="text-base opacity-90 max-w-2xl mx-auto">
+                                        Join thousands of satisfied customers who trust our reliable, innovative
+                                        solutions
+                                    </p>
+                                </div>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <!-- Uptime Card -->
+                                    <div
+                                        class="stat-card bg-white/10 backdrop-blur-sm rounded-2xl p-1 border border-white/20 hover:border-white/40 text-center">
+                                        <div class="icon-container mb-4">
+                                            <div
+                                                class="w-10 h-10 mt-2 bg-emerald-500 rounded-full flex items-center justify-center mx-auto">
+                                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="stat-number text-2xl font-bold">99.9%</div>
+                                          <div class="text-sm opacity-90">Uptime</div>
+                                    </div>
+
+                                    <!-- Support Card -->
+                                    <div
+                                        class="stat-card bg-white/10 backdrop-blur-sm rounded-2xl p-1 border border-white/20 hover:border-white/40 text-center">
+                                        <div class="icon-container mb-4">
+                                            <div
+                                                class="w-10 h-10 mt-2 bg-blue-500 rounded-full flex items-center justify-center mx-auto">
+                                                <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2"
+                                                        d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="stat-number text-2xl font-bold ">24/7</div>
+                                          <div class="text-sm opacity-90">Support</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute -top-4 -right-4 md:w-20 md:h-20 w-16 h-16 bg-yellow-400 rounded-full animate-bounce-custom flex items-center justify-center text-2xl">
+                            ⭐</div>
                     </div>
                 </div>
             </div>
@@ -137,10 +213,10 @@
                 Join thousands of businesses already using Spare Hub INC. to streamline their operations
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button
+                <a href="./contact.html"
                     class="card-hover bg-transparent border-2 border-[#00CC00] text-[#00CC00] px-8 py-3 rounded-lg font-semibold text-lg">
                     Contact Us
-                </button>
+                </a>
             </div>
         </div>
     </section>
@@ -190,62 +266,78 @@
         </div>
     </section>
 
-    <!-- Footer -->
+   <!-- Footer -->
     <footer class="bg-black text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="animate-fade-in-scale">
                     <div class="text-2xl font-bold mb-4">
-                        <img src="./images/Spare Hub.webp" alt="Spare Hub" class="h-8">
+                        <img src="./images/Spare Hub.webp" alt="Spare Hub" class="h-12">
                     </div>
-                    <p class="text-gray-400">Spare Hub INC. inventory management for modern businesses.</p>
+                    <p class="text-gray-400"> Spare Hub INC. Inventory Management Revolutionize your inventory
+                        management with AI-powered insights, real-time tracking, and automated workflows. </p>
                 </div>
-                
-                <div class="animate-slide-in-up">
-                    <h3 class="text-lg font-bold mb-4 text-[#108e10]">Product</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-brand hover-float font-semibold">Features</a></li>
-                        <li><a href="#" class="hover:text-brand hover-float font-semibold">Pricing</a></li>
-                        <li><a href="#" class="hover:text-brand hover-float font-semibold">API</a></li>
-                        <li><a href="#" class="hover:text-brand hover-float font-semibold">Documentation</a></li>
-                    </ul>
-                </div>
-                
-                <div class="animate-slide-in-up delay-100">
+
+                <div class="animate-slide-in-up delay-100 md:mx-auto">
                     <h3 class="text-lg font-bold mb-4 text-[#108e10]">Links</h3>
                     <ul class="space-y-2 text-gray-400">
                         <li><a href="./index.html" class="hover:text-brand hover-float font-semibold">Home</a></li>
                         <li><a href="./about.html" class="hover:text-brand hover-float font-semibold">About Us</a></li>
-                        <li><a href="./contact.html" class="hover:text-brand hover-float font-semibold">Contact Us</a></li>
-                        <li><a href="./privacy.html" class="hover:text-brand hover-float font-semibold">Privacy & Policy</a></li>
-                        <li><a href="./terms.html" class="hover:text-brand hover-float font-semibold">Terms & Condition</a></li>
+                        <li><a href="./contact.html" class="hover:text-brand hover-float font-semibold">Contact Us</a>
+                        </li>
+                        <li><a href="./privacy.html" class="hover:text-brand hover-float font-semibold">Privacy &
+                                Policy</a></li>
+                        <li><a href="./terms.html" class="hover:text-brand hover-float font-semibold">Terms &
+                                Condition</a></li>
                     </ul>
                 </div>
-                
-                <div class="animate-slide-in-up delay-200">
+
+                <div class="animate-slide-in-up delay-200 md:mx-auto">
                     <h3 class="text-lg font-bold mb-4 text-[#108e10]">Connect</h3>
                     <div class="flex space-x-4">
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-brand hover-scale animate-pulse-custom group">
+                        <a href="https://www.facebook.com/profile.php?id=61568944533148"
+                            class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-brand hover-scale animate-pulse-custom group">
                             <i class="fab fa-facebook text-blue-600 group-hover:text-white"></i>
                         </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-brand hover-scale animate-pulse-custom delay-100 group">
+                        <a href="https://www.instagram.com/sparehubinc"
+                            class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-brand hover-scale animate-pulse-custom delay-100 group">
                             <i class="fab fa-instagram text-[#833AB4] group-hover:text-white"></i>
-                        </a>
-                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-brand hover-scale animate-pulse-custom delay-200 group">
-                            <i class="fa-brands fa-youtube text-red-500 group-hover:text-white"></i>
                         </a>
                     </div>
                 </div>
             </div>
-            
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400 animate-fade-in-scale">
-                <p>&copy; 2024 Marv Softwares India Private Limited. All rights reserved.</p>
+
+            <div class="mt-8 border-t border-gray-800 pt-6 text-center md:flex justify-between text-gray-400 animate-fade-in-scale">
+                <p class="text-sm sm:text-base">
+                    &copy; 2025 <strong>SpareHubINC.</strong> All rights reserved.
+                </p>
+                <p class="text-xs sm:text-sm mt-1">
+                    Developed by <strong>Marv Softwares India Private Limited.</strong>
+                </p>
             </div>
+
         </div>
     </footer>
 
-       <script>
-        // Smooth scrolling for navigation links
+        <script>
+       
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+ 
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.querySelector('.faq-content');
+                const icon = button.querySelector('i');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+ 
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -258,60 +350,7 @@
                 }
             });
         });
-
-        // Counter animation for stats
-        function animateCounter(element, target, duration = 2000) {
-            let start = 0;
-            const increment = target / (duration / 16);
-            let current = start;
-            
-            const timer = setInterval(() => {
-                current += increment;
-                if (current >= target) {
-                    current = target;
-                    clearInterval(timer);
-                }
-                
-                if (element.id === 'stat4') {
-                    element.textContent = Math.floor(current) + '%';
-                } else {
-                    element.textContent = Math.floor(current).toLocaleString();
-                }
-            }, 16);
-        }
-
-        // Initialize counters when they come into view
-        const observerOptions = {
-            threshold: 0.5,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const element = entry.target;
-                    let target;
-                    
-                    switch(element.id) {
-                        case 'stat1': target = 10000; break;
-                        case 'stat2': target = 5000000; break;
-                        case 'stat3': target = 150; break;
-                        case 'stat4': target = 99; break;
-                    }
-                    
-                    animateCounter(element, target);
-                    observer.unobserve(element);
-                }
-            });
-        }, observerOptions);
-
-        // Observe stat elements
-        ['stat1', 'stat2', 'stat3', 'stat4'].forEach(id => {
-            const element = document.getElementById(id);
-            if (element) observer.observe(element);
-        });
-
-        // Floating particles animation
+ 
         function createParticle() {
             const particle = document.createElement('div');
             particle.className = 'fixed w-2 h-2 rounded-full opacity-30 pointer-events-none z-10';
@@ -320,18 +359,16 @@
             particle.style.top = window.innerHeight + 'px';
             particle.style.animation = `floatUp ${8 + Math.random() * 4}s linear infinite`;
             document.body.appendChild(particle);
-            
+
             setTimeout(() => {
                 if (particle.parentNode) {
                     particle.remove();
                 }
             }, 12000);
         }
-
-        // Create particles periodically
+ 
         setInterval(createParticle, 2000);
-
-        // Add floating particles CSS
+ 
         const particleStyle = document.createElement('style');
         particleStyle.textContent = `
             @keyframes floatUp {
@@ -352,8 +389,7 @@
             }
         `;
         document.head.appendChild(particleStyle);
-
-        // Interactive background effect
+  
         document.addEventListener('mousemove', (e) => {
             const cursor = document.createElement('div');
             cursor.className = 'fixed w-4 h-4 bg-blue-400 rounded-full opacity-20 pointer-events-none';
@@ -361,13 +397,12 @@
             cursor.style.top = e.clientY - 8 + 'px';
             cursor.style.animation = 'fadeOut 1s ease-out forwards';
             document.body.appendChild(cursor);
-            
+
             setTimeout(() => {
                 cursor.remove();
             }, 1000);
         });
-
-        // Add fade out animation for cursor trail
+  
         const cursorStyle = document.createElement('style');
         cursorStyle.textContent = `
             @keyframes fadeOut {
@@ -382,79 +417,17 @@
             }
         `;
         document.head.appendChild(cursorStyle);
-
-        // Parallax effect for hero section (fixed)
+ 
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
             const parallax = document.querySelector('.gradient-bg');
-            
+
             if (parallax && scrolled < window.innerHeight) {
                 const speed = scrolled * 0.3;
                 parallax.style.transform = `translateY(${speed}px)`;
             }
         });
-
-        // Loading animation
-        window.addEventListener('load', () => {
-            // Add stagger animation to elements
-            const elements = document.querySelectorAll('.animate-slide-in-up, .animate-slide-in-left, .animate-slide-in-right');
-            elements.forEach((el, index) => {
-                el.style.animationDelay = `${index * 0.1}s`;
-            });
-        });
-
-        // Mobile menu toggle
-        const mobileMenuBtn = document.querySelector('.md\\:hidden button');
-        const mobileMenu = document.createElement('div');
-        mobileMenu.className = 'md:hidden bg-black shadow-lg absolute top-full left-0 right-0 hidden';
-        mobileMenu.innerHTML = `
-            <div class="px-4 py-4 space-y-2 text-center">
-                <a href="./index.html" class="block py-2 text-gray-200 hover:text-blue-600">Home</a>
-                <a href="./about.html" class="block py-2 text-gray-200 hover:text-blue-600">About Us</a>
-                <a href="./contact.html" class="block py-2 text-gray-200 hover:text-blue-600">Contact Us</a>
-                <button class="w-full bg-green-800 text-white px-6 py-2 rounded-full hover:bg-green-900 mt-2">
-                    Get Started
-                </button>
-            </div>
-        `;
-
-        if (mobileMenuBtn) {
-            mobileMenuBtn.parentNode.appendChild(mobileMenu);
-            mobileMenuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        }
-
-        // Form submission with animation
-        const contactForm = document.querySelector('#contact form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                const submitBtn = contactForm.querySelector('button[type="submit"]');
-                const originalText = submitBtn.textContent;
-                
-                // Animate button
-                submitBtn.textContent = 'Sending...';
-                submitBtn.classList.add('animate-pulse-custom');
-                submitBtn.disabled = true;
-                
-                // Simulate form submission
-                setTimeout(() => {
-                    submitBtn.textContent = 'Message Sent! ✓';
-                    submitBtn.classList.remove('animate-pulse-custom');
-                    submitBtn.classList.add('bg-green-600');
-                    
-                    setTimeout(() => {
-                        submitBtn.textContent = originalText;
-                        submitBtn.classList.remove('bg-green-600');
-                        submitBtn.disabled = false;
-                        contactForm.reset();
-                    }, 2000);
-                }, 1500);
-            });
-        }
-
-        // Intersection Observer for scroll animations
+ 
         const scrollObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -464,48 +437,11 @@
         }, {
             threshold: 0.1
         });
-
-        // Observe all sections for scroll animations
+ 
         document.querySelectorAll('section').forEach(section => {
             scrollObserver.observe(section);
         });
-
-        // Add typing effect to hero subtitle
-        function typeWriter(element, text, speed = 100) {
-            let i = 0;
-            element.innerHTML = '';
-            
-            function type() {
-                if (i < text.length) {
-                    element.innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(type, speed);
-                }
-            }
-            type();
-        }
-
-        // Initialize typing effect after page load
-        setTimeout(() => {
-            const subtitle = document.querySelector('#home p');
-            if (subtitle) {
-                const originalText = subtitle.textContent;
-                typeWriter(subtitle, originalText, 50);
-            }
-        }, 4000);
-
-        // Add hover sound effect (visual feedback)
-        document.querySelectorAll('button, a').forEach(element => {
-            element.addEventListener('mouseenter', () => {
-                element.style.transform = 'scale(1.05)';
-            });
-            
-            element.addEventListener('mouseleave', () => {
-                element.style.transform = 'scale(1)';
-            });
-        });
-
-        // Dynamic gradient animation
+  
         let gradientAngle = 0;
         setInterval(() => {
             gradientAngle += 1;
